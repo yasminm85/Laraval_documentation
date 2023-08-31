@@ -1,0 +1,14 @@
+> CREATE LARAVEL
+composer create-project laravel/laravel:^9.0 example-app
+> Membuat Controller
+php artisan make:controller nama_controllernya
+> Membuat migration
+php artisan make:migration create_profile_table
+> Cara menjalankan migrate
+php artisan migrate
+> Membuat kolom baru migration 
+php artisan make:migration add_address_to_profile_table
+> Membuat kolom setelah kolom sebelumnya
+co/ $table->text('address')->after('nama_column')->nullable();
+nullable digunakan apabila ada data yang di migration akan kosong semua
+pada bagian down diisi oleh nama kolom baru
